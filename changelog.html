@@ -27,34 +27,73 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content overview">
+               <div class="content getting-started">
                    <div class="content-data">
 
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="-unreleased-">[Unreleased]</h2>
+<h2 id="-2-0-0-2018-11-04">[2.0.0] - 2018-11-04</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>CHANGELOG</li>
+<li>compile and test script for different node versions</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>added nodejs 11 to travis.yml</li>
+<li>updated dependencies</li>
+<li>use <a href="mailto:inspector-metrics@1.13.0">inspector-metrics@1.13.0</a></li>
+<li>adapted new MetricLogger implementation</li>
+<li>compile target from &quot;es2017&quot; to &quot;es6&quot;</li>
+</ul>
+<h2 id="-1-1-0-2018-10-04">[1.1.0] - 2018-10-04</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>support for monotone counters</li>
+<li>&quot;description&quot; &amp; &quot;homepage&quot; to package.json</li>
+<li>jsdocs for components</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>fixed linting config</li>
+<li>refactored playground</li>
+<li>updated dependencies</li>
+<li>use <a href="mailto:inspector-metrics@1.11.0">inspector-metrics@1.11.0</a></li>
+<li>refactored build scripts</li>
+<li>use compodoc as documentation tool</li>
+</ul>
+<h2 id="-1-0-1-2018-07-08">[1.0.1] - 2018-07-08</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>updated dependencies</li>
+<li>use <a href="mailto:inspector-metrics@1.8.7">inspector-metrics@1.8.7</a></li>
+<li>added nodejs 10 to travis.yml</li>
+</ul>
+<h2 id="-1-0-0-2018-02-08">[1.0.0] - 2018-02-08</h2>
+<p>Initial commit.</p>
+<h3 id="added">Added</h3>
+<ul>
+<li>project setup<ul>
+<li>README</li>
+<li>typescript config</li>
+<li>lint config</li>
+</ul>
+</li>
+<li>licensed under MIT license</li>
+<li>basic carbon / graphite reporter</li>
+<li>mocha testing (with chai, sinon)</li>
+<li>Jenkins pipeline</li>
+<li>NYC code-coverage config</li>
+<li>added editorconfig file</li>
+<li>travis.yml for nodejs 6, 7, 8, 9</li>
+<li>basic playground setup</li>
+<li>use <a href="mailto:inspector-metrics@1.8.3">inspector-metrics@1.8.3</a></li>
+</ul>
 
-<ol class="breadcrumb">
-    <li>Overview</li>
-</ol>
 
-<div class="container-fluid overview">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-ios-paper"></span></h4>
-                    <p class="card-text">1 Class</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card text-center">
-                <div class="card-block">
-                    <h4 class="card-title"><span class="icon ion-md-information-circle-outline"></span></h4>
-                    <p class="card-text">2 Interfaces</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -87,8 +126,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 0;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'overview';
-            var COMPODOC_CURRENT_PAGE_URL = 'overview.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'changelog.html';
        </script>
 
        <script src="./js/libs/custom-elements.min.js"></script>

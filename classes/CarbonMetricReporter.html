@@ -18,10 +18,7 @@
         </div>
 
         <div class="xs-menu menu" id="mobile-menu">
-                <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search">
-</div>
-            <compodoc-menu></compodoc-menu>
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
         </div>
 
         <div class="container-fluid main">
@@ -78,7 +75,7 @@
                 <h3>Extends</h3>
             </p>
             <p class="comment">
-                    <code>MetricReporter</code>
+                    <code>ScheduledMetricReporter</code>
             </p>
 
 
@@ -106,43 +103,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#clock">clock</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#host">host</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#interval">interval</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#log">log</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
                                 <a href="#logMetadata">logMetadata</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#metricStates">metricStates</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#minReportingTimeout">minReportingTimeout</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#tags">tags</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#timer">timer</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#unit">unit</a>
                             </li>
                         </ul>
                     </td>
@@ -157,73 +118,36 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#buildTags">buildTags</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Public</span>
                                 <a href="#getLog">getLog</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#getNumber">getNumber</a>
+                                    <span class="modifier">Protected</span>
+                                <a href="#handleResults">handleResults</a>
                             </li>
                             <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#getTags">getTags</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#hasChanged">hasChanged</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                    <span class="modifier">Async</span>
-                                <a href="#report">report</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Protected</span>
                                 <a href="#reportCounter">reportCounter</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Protected</span>
                                 <a href="#reportGauge">reportGauge</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Protected</span>
                                 <a href="#reportHistogram">reportHistogram</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Protected</span>
                                 <a href="#reportMeter">reportMeter</a>
                             </li>
                             <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#reportMetricRegistry">reportMetricRegistry</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#reportMetrics">reportMetrics</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#reportMonotoneCounter">reportMonotoneCounter</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Protected</span>
                                 <a href="#reportTimer">reportTimer</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#sendMetric">sendMetric</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
                                 <a href="#setLog">setLog</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#setTags">setTags</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
@@ -252,12 +176,12 @@
                 <tr>
                     <td class="col-md-4">
                                 <span class="modifier">Public</span>
-                        <code>constructor(host: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, interval: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, unit: TimeUnit, tags: Map<string | string>, clock: Clock, minReportingTimeout: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                        <code>constructor(undefined: literal type)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:151</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:95</a></div>
                             </td>
                         </tr>
 
@@ -273,105 +197,19 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
-                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>host</td>
                                                   
                                                         <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                                    <code>literal type</code>
                                                         </td>
                                                   
                                                     <td>
                                                             No
                                                     </td>
                                                     
-                                                        <td>
-                                                                <code><p>The carbon/graphite host.</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>interval</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <code><p>The reporting interval.</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>unit</td>
-                                                  
-                                                        <td>
-                                                                    <code>TimeUnit</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <code><p>The time unit for the reporting interval.</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>tags</td>
-                                                  
-                                                        <td>
-                                                                    <code>Map&lt;string | string&gt;</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <code><p>Tags assigned to every metric.</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>clock</td>
-                                                  
-                                                        <td>
-                                                                    <code>Clock</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <code><p>The clock - used to determine the timestamp of the metrics while reporting.</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>minReportingTimeout</td>
-                                                  
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                        <td>
-                                                                <code><p>The time in minutes the report sends even unchanged metrics.</p>
-</code>
-                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -415,182 +253,13 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:151</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Graphite / carbon client instance.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="clock"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            clock
-                            </b>
-                            <a href="#clock"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>clock:     <code>Clock</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Clock</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:79</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Clock used to determine the current timestamp.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="host"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            host
-                            </b>
-                            <a href="#host"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>host:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:71</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>The graphite / carbon host.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="interval"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            interval
-                            </b>
-                            <a href="#interval"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>interval:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:95</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Reporting interval.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="log"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            log
-                            </b>
-                            <a href="#log"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>log:     <code>Logger</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Logger</code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>console</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:135</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Minimal logger interface to report failures.</p>
+                        <div class="io-description"><p>Graphite / carbon client instance.</p>
 </div>
                     </td>
                 </tr>
@@ -625,223 +294,13 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:127</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Metadata for the logger.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="metricStates"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            metricStates
-                            </b>
-                            <a href="#metricStates"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>metricStates:     <code><a href="../interfaces/MetricEntry.html" target="_self" >Map&lt;number | MetricEntry&gt;</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../interfaces/MetricEntry.html" target="_self" >Map&lt;number | MetricEntry&gt;</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>new Map()</code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:143</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Saves the state of each reported metrics.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="minReportingTimeout"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            minReportingTimeout
-                            </b>
-                            <a href="#minReportingTimeout"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>minReportingTimeout:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:103</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Minimal timeout to include a metric instance into a reporting.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="tags"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            tags
-                            </b>
-                            <a href="#tags"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>tags:     <code>Map&lt;string | string&gt;</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>Map&lt;string | string&gt;</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:119</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Tags assigned to this reporter instance - reported for every metric instance.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="timer"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            timer
-                            </b>
-                            <a href="#timer"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>timer:     <code>NodeJS.Timer</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>NodeJS.Timer</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:87</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Reference for the object returned by the scheduler function.</p>
-</div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="unit"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            unit
-                            </b>
-                            <a href="#unit"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <span class="modifier-icon icon ion-ios-reset"></span><code>unit:     <code>TimeUnit</code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code>TimeUnit</code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:111</a></div>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Time unit for the reporting interval.</p>
+                        <div class="io-description"><p>Metadata for the logger.</p>
 </div>
                     </td>
                 </tr>
@@ -855,91 +314,6 @@
         <h3 id="methods">
             Methods
         </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="buildTags"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            buildTags
-                            </b>
-                            <a href="#buildTags"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>buildTags(commonTags: Map<string | string>, taggable: Taggable)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="388" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:388</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Builds the tags using the metric&#39;s tags and this reportes tags.</p>
-</div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>commonTags</td>
-                                                        <td>
-                                                                    <code>Map&lt;string | string&gt;</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                                <tr>
-                                                        <td>taggable</td>
-                                                        <td>
-                                                                    <code>Taggable</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code>literal type</code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -964,7 +338,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="213" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:213</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:177</a></div>
                             </td>
                         </tr>
 
@@ -991,34 +365,34 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="getNumber"></a>
+                        <a name="handleResults"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
-                            getNumber
+                                <span class="modifier">Protected</span>
+                            handleResults
                             </b>
-                            <a href="#getNumber"><span class="icon ion-ios-link"></span></a>
+                            <a href="#handleResults"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>getNumber(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                        <code>handleResults(ctx: OverallReportContext, registry: MetricRegistry, timestamp: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>, type: MetricType, results: <a href="../interfaces/CarbonData.html">Array<ReportingResult<any, CarbonData>></a>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="403" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:403</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:224</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Either gets 0 or the specifed value.</p>
+                            <div class="io-description"><p>Uses the client instance to report the given metric results.</p>
 </div>
 
                             <div class="io-description">
@@ -1033,130 +407,9 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>value</td>
+                                                        <td>ctx</td>
                                                         <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="getTags"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            getTags
-                            </b>
-                            <a href="#getTags"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>getTags()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="193" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:193</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Gets the reporter tags.</p>
-</div>
-
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code>Map&lt;string, string&gt;</code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="hasChanged"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            hasChanged
-                            </b>
-                            <a href="#hasChanged"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>hasChanged(metricId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, lastValue: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="359" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:359</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Determines if the specified metric has changed. This is always true if
-the minimum-reporting timeout was reached.</p>
-</div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>metricId</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                                    <code>OverallReportContext</code>
                                                         </td>
                                                     
                                                     <td>
@@ -1166,9 +419,9 @@ the minimum-reporting timeout was reached.</p>
 
                                                 </tr>
                                                 <tr>
-                                                        <td>lastValue</td>
+                                                        <td>registry</td>
                                                         <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                                    <code>MetricRegistry</code>
                                                         </td>
                                                     
                                                     <td>
@@ -1178,7 +431,7 @@ the minimum-reporting timeout was reached.</p>
 
                                                 </tr>
                                                 <tr>
-                                                        <td>date</td>
+                                                        <td>timestamp</td>
                                                         <td>
                                                                     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
                                                         </td>
@@ -1189,61 +442,42 @@ the minimum-reporting timeout was reached.</p>
                                                     
 
                                                 </tr>
+                                                <tr>
+                                                        <td>type</td>
+                                                        <td>
+                                                                    <code>MetricType</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>results</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/CarbonData.html" target="_self" >Array&lt;ReportingResult&lt;any, CarbonData&gt;&gt;</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
                             <div>
                             </div>
                             <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
 
                             </div>
                                 <div class="io-description">
                                     
                                 </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="report"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                                <span class="modifier">Async</span>
-                            report
-                            </b>
-                            <a href="#report"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>report()</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="259" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:259</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Reports the data points for each registered <a href="MetricRegistry">MetricRegistry</a>.</p>
-</div>
-
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -1255,7 +489,7 @@ the minimum-reporting timeout was reached.</p>
                         <a name="reportCounter"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
+                                <span class="modifier">Protected</span>
                             reportCounter
                             </b>
                             <a href="#reportCounter"><span class="icon ion-ios-link"></span></a>
@@ -1265,21 +499,21 @@ the minimum-reporting timeout was reached.</p>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>reportCounter(counter: Counter, date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                        <code>reportCounter(counter: MonotoneCounter | Counter, ctx: MetricSetReportContext<MonotoneCounter | Counter>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="442" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:442</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="252" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:252</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Computes and reports the fields of the counter.</p>
+                            <div class="io-description"><p>Builds the <a href="../interfaces/CarbonData.html">CarbonData</a> for the specified <a href="Counter">Counter</a> or <a href="MonotoneCounter">MonotoneCounter</a>.</p>
 </div>
 
                             <div class="io-description">
@@ -1296,7 +530,7 @@ the minimum-reporting timeout was reached.</p>
                                                 <tr>
                                                         <td>counter</td>
                                                         <td>
-                                                                    <code>Counter</code>
+                                                                    <code>MonotoneCounter | Counter</code>
                                                         </td>
                                                     
                                                     <td>
@@ -1306,9 +540,9 @@ the minimum-reporting timeout was reached.</p>
 
                                                 </tr>
                                                 <tr>
-                                                        <td>date</td>
+                                                        <td>ctx</td>
                                                         <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                                    <code>MetricSetReportContext&lt;MonotoneCounter | Counter&gt;</code>
                                                         </td>
                                                     
                                                     <td>
@@ -1323,7 +557,7 @@ the minimum-reporting timeout was reached.</p>
                             <div>
                             </div>
                             <div class="io-description">
-                                <b>Returns : </b>    <code>literal type</code>
+                                <b>Returns : </b>    <code><a href="../interfaces/CarbonData.html" target="_self" >CarbonData</a></code>
 
                             </div>
                                 <div class="io-description">
@@ -1340,7 +574,7 @@ the minimum-reporting timeout was reached.</p>
                         <a name="reportGauge"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
+                                <span class="modifier">Protected</span>
                             reportGauge
                             </b>
                             <a href="#reportGauge"><span class="icon ion-ios-link"></span></a>
@@ -1350,21 +584,21 @@ the minimum-reporting timeout was reached.</p>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>reportGauge(gauge: Gauge<any>, date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                        <code>reportGauge(gauge: Gauge<any>, ctx: MetricSetReportContext<Gauge<any>>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="465" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:465</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="280" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:280</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Computes and reports the fields of the gauge.</p>
+                            <div class="io-description"><p>Builds the <a href="../interfaces/CarbonData.html">CarbonData</a> for the specified <a href="Gauge">Gauge</a>.</p>
 </div>
 
                             <div class="io-description">
@@ -1391,9 +625,9 @@ the minimum-reporting timeout was reached.</p>
 
                                                 </tr>
                                                 <tr>
-                                                        <td>date</td>
+                                                        <td>ctx</td>
                                                         <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                                    <code>MetricSetReportContext&lt;Gauge&lt;any&gt;&gt;</code>
                                                         </td>
                                                     
                                                     <td>
@@ -1408,7 +642,7 @@ the minimum-reporting timeout was reached.</p>
                             <div>
                             </div>
                             <div class="io-description">
-                                <b>Returns : </b>    <code>literal type</code>
+                                <b>Returns : </b>    <code><a href="../interfaces/CarbonData.html" target="_self" >CarbonData</a></code>
 
                             </div>
                                 <div class="io-description">
@@ -1425,7 +659,7 @@ the minimum-reporting timeout was reached.</p>
                         <a name="reportHistogram"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
+                                <span class="modifier">Protected</span>
                             reportHistogram
                             </b>
                             <a href="#reportHistogram"><span class="icon ion-ios-link"></span></a>
@@ -1435,21 +669,21 @@ the minimum-reporting timeout was reached.</p>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>reportHistogram(histogram: Histogram, date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                        <code>reportHistogram(histogram: Histogram, ctx: MetricSetReportContext<Histogram>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="488" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:488</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="306" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:306</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Computes and reports the fields of the histogram.</p>
+                            <div class="io-description"><p>Builds the <a href="../interfaces/CarbonData.html">CarbonData</a> for the specified <a href="Histogram">Histogram</a>.</p>
 </div>
 
                             <div class="io-description">
@@ -1476,9 +710,9 @@ the minimum-reporting timeout was reached.</p>
 
                                                 </tr>
                                                 <tr>
-                                                        <td>date</td>
+                                                        <td>ctx</td>
                                                         <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                                    <code>MetricSetReportContext&lt;Histogram&gt;</code>
                                                         </td>
                                                     
                                                     <td>
@@ -1493,7 +727,7 @@ the minimum-reporting timeout was reached.</p>
                             <div>
                             </div>
                             <div class="io-description">
-                                <b>Returns : </b>    <code>literal type</code>
+                                <b>Returns : </b>    <code><a href="../interfaces/CarbonData.html" target="_self" >CarbonData</a></code>
 
                             </div>
                                 <div class="io-description">
@@ -1510,7 +744,7 @@ the minimum-reporting timeout was reached.</p>
                         <a name="reportMeter"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
+                                <span class="modifier">Protected</span>
                             reportMeter
                             </b>
                             <a href="#reportMeter"><span class="icon ion-ios-link"></span></a>
@@ -1520,21 +754,21 @@ the minimum-reporting timeout was reached.</p>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>reportMeter(meter: Meter, date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                        <code>reportMeter(meter: Meter, ctx: MetricSetReportContext<Meter>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="522" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:522</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="343" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:343</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Computes and reports the fields of the meter.</p>
+                            <div class="io-description"><p>Builds the <a href="../interfaces/CarbonData.html">CarbonData</a> for the specified <a href="Meter">Meter</a>.</p>
 </div>
 
                             <div class="io-description">
@@ -1561,9 +795,9 @@ the minimum-reporting timeout was reached.</p>
 
                                                 </tr>
                                                 <tr>
-                                                        <td>date</td>
+                                                        <td>ctx</td>
                                                         <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                                    <code>MetricSetReportContext&lt;Meter&gt;</code>
                                                         </td>
                                                     
                                                     <td>
@@ -1578,309 +812,7 @@ the minimum-reporting timeout was reached.</p>
                             <div>
                             </div>
                             <div class="io-description">
-                                <b>Returns : </b>    <code>literal type</code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="reportMetricRegistry"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            reportMetricRegistry
-                            </b>
-                            <a href="#reportMetricRegistry"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>reportMetricRegistry(registry: MetricRegistry)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="270" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:270</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Reports the data points for the specified <a href="MetricRegistry">MetricRegistry</a>.</p>
-</div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>registry</td>
-                                                        <td>
-                                                                    <code>MetricRegistry</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="reportMetrics"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            reportMetrics
-                            </b>
-                            <a href="#reportMetrics"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>reportMetrics(metrics: T[], date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>, type: <a href="../undefineds/MetricType.html">MetricType</a>, reportFunction: (metric: Metric,date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>) => void, lastModifiedFunction: (metric: Metric) => void)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="307" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:307</a></div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="col-md-4">
-                                <b>Type parameters :</b>
-                                <ul class="type-parameters">
-                                        <li>T</li>
-                                </ul>
-                            </td>
-                        </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Reports a collection of metric instance for a certain type.</p>
-</div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                                    <td>Description</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>metrics</td>
-                                                        <td>
-                                                                    <code>T[]</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                        <td>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>date</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                        <td>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>type</td>
-                                                        <td>
-                                                                    <code><a href="../miscellaneous/typealiases.html#MetricType" target="_self" >MetricType</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                        <td>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>reportFunction</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                        <td>
-                                                                <code><p>The function to build the data points for a certain metric.</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                                <tr>
-                                                        <td>lastModifiedFunction</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/function" target="_blank" >function</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                        <td>
-                                                                <code><p>function to determine if a metric has a different value since the last reporting.</p>
-</code>
-                                                        </td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="reportMonotoneCounter"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            reportMonotoneCounter
-                            </b>
-                            <a href="#reportMonotoneCounter"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>reportMonotoneCounter(counter: MonotoneCounter, date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="419" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:419</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Computes and reports the fields of the monotone-counter.</p>
-</div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>counter</td>
-                                                        <td>
-                                                                    <code>MonotoneCounter</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                                <tr>
-                                                        <td>date</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code>literal type</code>
+                                <b>Returns : </b>    <code><a href="../interfaces/CarbonData.html" target="_self" >CarbonData</a></code>
 
                             </div>
                                 <div class="io-description">
@@ -1897,7 +829,7 @@ the minimum-reporting timeout was reached.</p>
                         <a name="reportTimer"></a>
                         <span class="name">
                             <b>
-                                <span class="modifier">Private</span>
+                                <span class="modifier">Protected</span>
                             reportTimer
                             </b>
                             <a href="#reportTimer"><span class="icon ion-ios-link"></span></a>
@@ -1907,21 +839,21 @@ the minimum-reporting timeout was reached.</p>
                 <tr>
                     <td class="col-md-4">
                             <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>reportTimer(timer: Timer, date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                        <code>reportTimer(timer: Timer, ctx: MetricSetReportContext<Timer>)</code>
                     </td>
                 </tr>
 
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="549" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:549</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="373" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:373</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Computes and reports the fields of the timer.</p>
+                            <div class="io-description"><p>Builds the <a href="../interfaces/CarbonData.html">CarbonData</a> for the specified <a href="Timer">Timer</a>.</p>
 </div>
 
                             <div class="io-description">
@@ -1948,9 +880,9 @@ the minimum-reporting timeout was reached.</p>
 
                                                 </tr>
                                                 <tr>
-                                                        <td>date</td>
+                                                        <td>ctx</td>
                                                         <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                                                    <code>MetricSetReportContext&lt;Timer&gt;</code>
                                                         </td>
                                                     
                                                     <td>
@@ -1965,104 +897,7 @@ the minimum-reporting timeout was reached.</p>
                             <div>
                             </div>
                             <div class="io-description">
-                                <b>Returns : </b>    <code>literal type</code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="sendMetric"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Private</span>
-                            sendMetric
-                            </b>
-                            <a href="#sendMetric"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>sendMetric(metric: Metric, timestamp: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>, measurement: literal type)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="339" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:339</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Uses the client instance to report the given metric.</p>
-</div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>metric</td>
-                                                        <td>
-                                                                    <code>Metric</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                                <tr>
-                                                        <td>timestamp</td>
-                                                        <td>
-                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                                <tr>
-                                                        <td>measurement</td>
-                                                        <td>
-                                                                    <code>literal type</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                <b>Returns : </b>    <code><a href="../interfaces/CarbonData.html" target="_self" >CarbonData</a></code>
 
                             </div>
                                 <div class="io-description">
@@ -2096,7 +931,7 @@ the minimum-reporting timeout was reached.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="223" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:223</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:187</a></div>
                             </td>
                         </tr>
 
@@ -2149,79 +984,6 @@ the minimum-reporting timeout was reached.</p>
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="setTags"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                            setTags
-                            </b>
-                            <a href="#setTags"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                            <span class="modifier-icon icon ion-ios-reset"></span>
-                        <code>setTags(tags: Map<string | string>)</code>
-                    </td>
-                </tr>
-
-
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="203" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:203</a></div>
-                            </td>
-                        </tr>
-
-
-                <tr>
-                    <td class="col-md-4">
-                            <div class="io-description"><p>Sets the reporter tags.</p>
-</div>
-
-                            <div class="io-description">
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>tags</td>
-                                                        <td>
-                                                                    <code>Map&lt;string | string&gt;</code>
-                                                        </td>
-                                                    
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                            <div>
-                            </div>
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
-                                <div class="io-description">
-                                    
-                                </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
                         <a name="start"></a>
                         <span class="name">
                             <b>
@@ -2242,7 +1004,7 @@ the minimum-reporting timeout was reached.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="232" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:232</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="196" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:196</a></div>
                             </td>
                         </tr>
 
@@ -2253,7 +1015,7 @@ the minimum-reporting timeout was reached.</p>
 </div>
 
                             <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                                <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
 
                             </div>
                     </td>
@@ -2284,7 +1046,7 @@ the minimum-reporting timeout was reached.</p>
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="244" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:244</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:206</a></div>
                             </td>
                         </tr>
 
@@ -2327,44 +1089,60 @@ import {
     Histogram,
     Logger,
     Meter,
-    Metric,
     MetricRegistry,
-    MetricReporter,
+    MetricSetReportContext,
+    MetricType,
     MILLISECOND,
-    MINUTE,
     MonotoneCounter,
+    OverallReportContext,
+    ReportingResult,
+    ScheduledMetricReporter,
+    ScheduledMetricReporterOptions,
+    Scheduler,
     StdClock,
-    Taggable,
+    Tags,
     Timer,
     TimeUnit,
 } from &quot;inspector-metrics&quot;;
 
-/**
- * Enumeration of all metric types.
- */
-export type MetricType &#x3D; &quot;counter&quot; | &quot;gauge&quot; | &quot;histogram&quot; | &quot;meter&quot; | &quot;timer&quot;;
+export interface CarbonMetricReporterOptions extends ScheduledMetricReporterOptions {
+    /**
+     * The graphite / carbon host.
+     *
+     * @type {string}
+     * @memberof CarbonMetricReporterOptions
+     */
+    readonly host: string;
+    /**
+     * Minimal logger interface to report failures.
+     *
+     * @type {Logger}
+     * @memberof CarbonMetricReporterOptions
+     */
+    log: Logger;
+}
 
 /**
- * Entry interface to track the last value and timestamp of a metric instance.
+ * Helper interface for representing the result of a metric report.
  *
- * @interface MetricEntry
+ * @export
+ * @interface CarbonData
  */
-interface MetricEntry {
+export interface CarbonData {
     /**
-     * Timestamp of the last reporting.
+     * Document that is getting sent to the carbon / graphite server.
      *
-     * @type {number}
-     * @memberof MetricEntry
+     * @type {*}
+     * @memberof CarbonData
      */
-    lastReport: number;
-
+    measurement: any;
     /**
-     * Last reported reference value.
+     * Combined tags for the metric.
      *
-     * @type {number}
-     * @memberof MetricEntry
+     * @type {Tags}
+     * @memberof CarbonData
      */
-    lastValue: number;
+    tags: Tags;
 }
 
 /**
@@ -2374,64 +1152,8 @@ interface MetricEntry {
  * @class CarbonMetricReporter
  * @extends {MetricReporter}
  */
-export class CarbonMetricReporter extends MetricReporter {
+export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetricReporterOptions, CarbonData&gt; {
 
-    /**
-     * The graphite / carbon host.
-     *
-     * @private
-     * @type {string}
-     * @memberof CarbonMetricReporter
-     */
-    private host: string;
-    /**
-     * Clock used to determine the current timestamp.
-     *
-     * @private
-     * @type {Clock}
-     * @memberof CarbonMetricReporter
-     */
-    private clock: Clock;
-    /**
-     * Reference for the object returned by the scheduler function.
-     *
-     * @private
-     * @type {NodeJS.Timer}
-     * @memberof CarbonMetricReporter
-     */
-    private timer: NodeJS.Timer;
-    /**
-     * Reporting interval.
-     *
-     * @private
-     * @type {number}
-     * @memberof CarbonMetricReporter
-     */
-    private interval: number;
-    /**
-     * Minimal timeout to include a metric instance into a reporting.
-     *
-     * @private
-     * @type {number}
-     * @memberof CarbonMetricReporter
-     */
-    private minReportingTimeout: number;
-    /**
-     * Time unit for the reporting interval.
-     *
-     * @private
-     * @type {TimeUnit}
-     * @memberof CarbonMetricReporter
-     */
-    private unit: TimeUnit;
-    /**
-     * Tags assigned to this reporter instance - reported for every metric instance.
-     *
-     * @private
-     * @type {Map&lt;string, string&gt;}
-     * @memberof CarbonMetricReporter
-     */
-    private tags: Map&lt;string, string&gt;;
     /**
      * Metadata for the logger.
      *
@@ -2440,22 +1162,6 @@ export class CarbonMetricReporter extends MetricReporter {
      * @memberof CarbonMetricReporter
      */
     private logMetadata: any;
-    /**
-     * Minimal logger interface to report failures.
-     *
-     * @private
-     * @type {Logger}
-     * @memberof CarbonMetricReporter
-     */
-    private log: Logger &#x3D; console;
-    /**
-     * Saves the state of each reported metrics.
-     *
-     * @private
-     * @type {Map&lt;number, MetricEntry&gt;}
-     * @memberof CarbonMetricReporter
-     */
-    private metricStates: Map&lt;number, MetricEntry&gt; &#x3D; new Map();
     /**
      * Graphite / carbon client instance.
      *
@@ -2468,55 +1174,75 @@ export class CarbonMetricReporter extends MetricReporter {
     /**
      * Creates an instance of CarbonMetricReporter.
      *
-     * @param {string} host The carbon/graphite host.
-     * @param {number} [interval&#x3D;1000] The reporting interval.
-     * @param {TimeUnit} [unit&#x3D;MILLISECOND] The time unit for the reporting interval.
-     * @param {Map&lt;string, string&gt;} [tags&#x3D;new Map()] Tags assigned to every metric.
-     * @param {Clock} [clock&#x3D;new StdClock()] The clock - used to determine the timestamp of the metrics while reporting.
-     * @param {number} [minReportingTimeout&#x3D;1] The time in minutes the report sends even unchanged metrics.
      * @memberof CarbonMetricReporter
      */
-    public constructor(
+    public constructor({
+        host,
+        log &#x3D; console,
+        reportInterval &#x3D; 1000,
+        unit &#x3D; MILLISECOND,
+        clock &#x3D; new StdClock(),
+        scheduler &#x3D; setInterval,
+        minReportingTimeout &#x3D; 1,
+        tags &#x3D; new Map(),
+    }: {
+        /**
+         * The graphite / carbon host.
+         * @type {string}
+         */
         host: string,
-        interval: number &#x3D; 1000,
-        unit: TimeUnit &#x3D; MILLISECOND,
-        tags: Map&lt;string, string&gt; &#x3D; new Map(),
-        clock: Clock &#x3D; new StdClock(),
-        minReportingTimeout &#x3D; 1) {
-        super();
-
-        this.host &#x3D; host;
-        this.interval &#x3D; interval;
-        this.unit &#x3D; unit;
-        this.tags &#x3D; tags;
-        this.clock &#x3D; clock;
-        this.minReportingTimeout &#x3D; MINUTE.convertTo(minReportingTimeout, MILLISECOND);
+        /**
+         * The logger instance used to report metrics.
+         * @type {Logger}
+         */
+        log?: Logger,
+        /**
+         * Reporting interval in the time-unit of {@link #unit}.
+         * @type {number}
+         */
+        reportInterval?: number;
+        /**
+         * The time-unit of the reporting interval.
+         * @type {TimeUnit}
+         */
+        unit?: TimeUnit;
+        /**
+         * The clock instance used determine the current time.
+         * @type {Clock}
+         */
+        clock?: Clock;
+        /**
+         * The scheduler function used to trigger reporting.
+         * @type {Scheduler}
+         */
+        scheduler?: Scheduler;
+        /**
+         * The timeout in which a metrics gets reported wether it&#x27;s value has changed or not.
+         * @type {number}
+         */
+        minReportingTimeout?: number;
+        /**
+         * Common tags for this reporter instance.
+         * @type {Map&lt;string, string&gt;}
+         */
+        tags?: Map&lt;string, string&gt;;
+    }) {
+        super({
+            clock,
+            host,
+            log,
+            minReportingTimeout,
+            reportInterval,
+            scheduler,
+            tags,
+            unit,
+        });
 
         this.logMetadata &#x3D; {
-            interval,
+            reportInterval,
             tags,
             unit,
         };
-    }
-
-    /**
-     * Gets the reporter tags.
-     *
-     * @returns {Map&lt;string, string&gt;}
-     * @memberof CarbonMetricReporter
-     */
-    public getTags(): Map&lt;string, string&gt; {
-        return this.tags;
-    }
-
-    /**
-     * Sets the reporter tags.
-     *
-     * @param {Map&lt;string, string&gt;} tags
-     * @memberof CarbonMetricReporter
-     */
-    public setTags(tags: Map&lt;string, string&gt;): void {
-        this.tags &#x3D; tags;
     }
 
     /**
@@ -2526,7 +1252,7 @@ export class CarbonMetricReporter extends MetricReporter {
      * @memberof CarbonMetricReporter
      */
     public getLog(): Logger {
-        return this.log;
+        return this.options.log;
     }
 
     /**
@@ -2536,7 +1262,7 @@ export class CarbonMetricReporter extends MetricReporter {
      * @memberof CarbonMetricReporter
      */
     public setLog(log: Logger): void {
-        this.log &#x3D; log;
+        this.options.log &#x3D; log;
     }
 
     /**
@@ -2544,11 +1270,9 @@ export class CarbonMetricReporter extends MetricReporter {
      *
      * @memberof CarbonMetricReporter
      */
-    public start(): void {
-        const interval: number &#x3D; this.unit.convertTo(this.interval, MILLISECOND);
-
-        this.client &#x3D; graphite.createClient(this.host);
-        this.timer &#x3D; setInterval(() &#x3D;&gt; this.report(), interval);
+    public start(): Promise&lt;any&gt; {
+        this.client &#x3D; graphite.createClient(this.options.host);
+        return super.start();
     }
 
     /**
@@ -2557,181 +1281,54 @@ export class CarbonMetricReporter extends MetricReporter {
      * @memberof CarbonMetricReporter
      */
     public stop(): void {
-        if (this.timer) {
-            this.timer.unref();
-        }
+        super.stop();
         if (this.client) {
             this.client.end();
         }
     }
 
     /**
-     * Reports the data points for each registered {@link MetricRegistry}.
+     * Uses the client instance to report the given metric results.
      *
-     * @private
-     * @memberof CarbonMetricReporter
-     */
-    private async report() {
-        this.metricRegistries.forEach((registry) &#x3D;&gt; this.reportMetricRegistry(registry));
-    }
-
-    /**
-     * Reports the data points for the specified {@link MetricRegistry}.
-     *
-     * @private
+     * @protected
      * @param {MetricRegistry} registry
-     * @memberof CarbonMetricReporter
-     */
-    private reportMetricRegistry(registry: MetricRegistry): void {
-        const now: Date &#x3D; new Date(this.clock.time().milliseconds);
-
-        this.reportMetrics(registry.getMonotoneCounterList(), now, &quot;counter&quot;,
-            (counter: MonotoneCounter, date: Date) &#x3D;&gt; this.reportMonotoneCounter(counter, date),
-            (counter: MonotoneCounter) &#x3D;&gt; counter.getCount());
-        this.reportMetrics(registry.getCounterList(), now, &quot;counter&quot;,
-            (counter: Counter, date: Date) &#x3D;&gt; this.reportCounter(counter, date),
-            (counter: Counter) &#x3D;&gt; counter.getCount());
-        this.reportMetrics(registry.getGaugeList(), now, &quot;gauge&quot;,
-            (gauge: Gauge&lt;any&gt;, date: Date) &#x3D;&gt; this.reportGauge(gauge, date),
-            (gauge: Gauge&lt;any&gt;) &#x3D;&gt; gauge.getValue());
-        this.reportMetrics(registry.getHistogramList(), now, &quot;histogram&quot;,
-            (histogram: Histogram, date: Date) &#x3D;&gt; this.reportHistogram(histogram, date),
-            (histogram: Histogram) &#x3D;&gt; histogram.getCount());
-        this.reportMetrics(registry.getMeterList(), now, &quot;meter&quot;,
-            (meter: Meter, date: Date) &#x3D;&gt; this.reportMeter(meter, date),
-            (meter: Meter) &#x3D;&gt; meter.getCount());
-        this.reportMetrics(registry.getTimerList(), now, &quot;timer&quot;,
-            (timer: Timer, date: Date) &#x3D;&gt; this.reportTimer(timer, date),
-            (timer: Timer) &#x3D;&gt; timer.getCount());
-    }
-
-    /**
-     * Reports a collection of metric instance for a certain type.
-     *
-     * @private
-     * @template T
-     * @param {T[]} metrics
-     * @param {Date} date
-     * @param {MetricType} type
-     * @param {(metric: Metric, date: Date) &#x3D;&gt; {}} reportFunction
-     *      The function to build the data points for a certain metric.
-     * @param {(metric: Metric) &#x3D;&gt; number} lastModifiedFunction
-     *      function to determine if a metric has a different value since the last reporting.
-     * @memberof CarbonMetricReporter
-     */
-    private reportMetrics&lt;T extends Metric&gt;(
-        metrics: T[],
-        date: Date,
-        type: MetricType,
-        reportFunction: (metric: Metric, date: Date) &#x3D;&gt; {},
-        lastModifiedFunction: (metric: Metric) &#x3D;&gt; number): void {
-
-        metrics.forEach((metric) &#x3D;&gt; {
-            const metricId &#x3D; (metric as any).id;
-            let changed &#x3D; true;
-            if (metricId) {
-                changed &#x3D; this.hasChanged(metricId, lastModifiedFunction(metric), date);
-            }
-
-            if (changed) {
-                const measurement &#x3D; reportFunction(metric, date);
-                if (!!measurement) {
-                    this.sendMetric(metric, date, measurement);
-                }
-            }
-        });
-    }
-
-    /**
-     * Uses the client instance to report the given metric.
-     *
-     * @private
-     * @param {Metric} metric
      * @param {Date} timestamp
-     * @param {{}} measurement
+     * @param {MetricType} type
+     * @param {ReportingResult&lt;any, CarbonData&gt;[]} results
+     * @returns {Promise&lt;any&gt;}
      * @memberof CarbonMetricReporter
      */
-    private sendMetric(metric: Metric, timestamp: Date, measurement: {}) {
-        const tags &#x3D; this.buildTags(this.getTags(), metric);
-        this.client.writeTagged(measurement, tags, timestamp, (err: any) &#x3D;&gt; {
-            if (err !&#x3D; null) {
-                this.log.error(err, this.logMetadata);
-            }
-        });
+    protected handleResults(
+        ctx: OverallReportContext,
+        registry: MetricRegistry,
+        timestamp: Date,
+        type: MetricType,
+        results: Array&lt;ReportingResult&lt;any, CarbonData&gt;&gt;): Promise&lt;any&gt; {
+        return Promise.all(results
+            .map((result) &#x3D;&gt; result.result)
+            .map((carbonData) &#x3D;&gt; new Promise((resolve, reject) &#x3D;&gt; {
+                this.client.writeTagged(carbonData.measurement, carbonData.tags, timestamp, (err: any) &#x3D;&gt; {
+                    if (err !&#x3D; null) {
+                        this.options.log.error(err, this.logMetadata);
+                        reject(err);
+                    }
+                    resolve();
+                });
+            })));
     }
 
     /**
-     * Determines if the specified metric has changed. This is always true if
-     * the minimum-reporting timeout was reached.
+     * Builds the {@link CarbonData} for the specified {@link Counter} or {@link MonotoneCounter}.
      *
-     * @private
-     * @param {number} metricId
-     * @param {number} lastValue
-     * @param {Date} date
-     * @returns {boolean}
+     * @protected
+     * @param {(MonotoneCounter | Counter)} counter
+     * @param {(MetricSetReportContext&lt;MonotoneCounter | Counter&gt;)} ctx
+     * @returns {CarbonData}
      * @memberof CarbonMetricReporter
      */
-    private hasChanged(metricId: number, lastValue: number, date: Date): boolean {
-        let changed &#x3D; true;
-        let metricEntry &#x3D; {
-            lastReport: 0,
-            lastValue,
-        };
-        if (this.metricStates.has(metricId)) {
-            metricEntry &#x3D; this.metricStates.get(metricId);
-            changed &#x3D; metricEntry.lastValue !&#x3D;&#x3D; lastValue;
-            if (!changed) {
-                changed &#x3D; metricEntry.lastReport + this.minReportingTimeout &lt; date.getTime();
-            }
-        }
-        if (changed) {
-            metricEntry.lastReport &#x3D; date.getTime();
-        }
-        this.metricStates.set(metricId, metricEntry);
-        return changed;
-    }
-
-    /**
-     * Builds the tags using the metric&#x27;s tags and this reportes tags.
-     *
-     * @private
-     * @param {Map&lt;string, string&gt;} commonTags
-     * @param {Taggable} taggable
-     * @returns {{ [key: string]: string }}
-     * @memberof CarbonMetricReporter
-     */
-    private buildTags(commonTags: Map&lt;string, string&gt;, taggable: Taggable): { [key: string]: string } {
-        const tags: { [x: string]: string } &#x3D; {};
-        commonTags.forEach((tag, key) &#x3D;&gt; tags[key] &#x3D; tag);
-        taggable.getTags().forEach((tag, key) &#x3D;&gt; tags[key] &#x3D; tag);
-        return tags;
-    }
-
-    /**
-     * Either gets 0 or the specifed value.
-     *
-     * @private
-     * @param {number} value
-     * @returns {number}
-     * @memberof CarbonMetricReporter
-     */
-    private getNumber(value: number): number {
-        if (isNaN(value)) {
-            return 0;
-        }
-        return value;
-    }
-
-    /**
-     * Computes and reports the fields of the monotone-counter.
-     *
-     * @private
-     * @param {MonotoneCounter} counter
-     * @param {Date} date
-     * @returns {{}}
-     * @memberof CarbonMetricReporter
-     */
-    private reportMonotoneCounter(counter: MonotoneCounter, date: Date): {} {
+    protected reportCounter(
+        counter: MonotoneCounter | Counter,
+        ctx: MetricSetReportContext&lt;MonotoneCounter | Counter&gt;): CarbonData {
         const value &#x3D; counter.getCount();
         if (!value || isNaN(value)) {
             return null;
@@ -2742,42 +1339,22 @@ export class CarbonMetricReporter extends MetricReporter {
         };
         measurement[&#x60;count&#x60;] &#x3D; counter.getCount() || 0;
 
-        return measurement;
-    }
-
-    /**
-     * Computes and reports the fields of the counter.
-     *
-     * @private
-     * @param {Counter} counter
-     * @param {Date} date
-     * @returns {{}}
-     * @memberof CarbonMetricReporter
-     */
-    private reportCounter(counter: Counter, date: Date): {} {
-        const value &#x3D; counter.getCount();
-        if (!value || isNaN(value)) {
-            return null;
-        }
-        const measurement: any &#x3D; {
-            group: counter.getGroup(),
-            name: counter.getName(),
+        return {
+            measurement,
+            tags: this.buildTags(ctx.registry, counter),
         };
-        measurement[&#x60;count&#x60;] &#x3D; counter.getCount() || 0;
-
-        return measurement;
     }
 
     /**
-     * Computes and reports the fields of the gauge.
+     * Builds the {@link CarbonData} for the specified {@link Gauge}.
      *
-     * @private
+     * @protected
      * @param {Gauge&lt;any&gt;} gauge
-     * @param {Date} date
-     * @returns {{}}
+     * @param {MetricSetReportContext&lt;Gauge&lt;any&gt;&gt;} ctx
+     * @returns {CarbonData}
      * @memberof CarbonMetricReporter
      */
-    private reportGauge(gauge: Gauge&lt;any&gt;, date: Date): {} {
+    protected reportGauge(gauge: Gauge&lt;any&gt;, ctx: MetricSetReportContext&lt;Gauge&lt;any&gt;&gt;): CarbonData {
         const value &#x3D; gauge.getValue();
         if (!value || isNaN(value)) {
             return null;
@@ -2788,19 +1365,22 @@ export class CarbonMetricReporter extends MetricReporter {
         };
         measurement[&#x60;value&#x60;] &#x3D; gauge.getValue() || 0;
 
-        return measurement;
+        return {
+            measurement,
+            tags: this.buildTags(ctx.registry, gauge),
+        };
     }
 
     /**
-     * Computes and reports the fields of the histogram.
+     * Builds the {@link CarbonData} for the specified {@link Histogram}.
      *
-     * @private
+     * @protected
      * @param {Histogram} histogram
-     * @param {Date} date
-     * @returns {{}}
+     * @param {MetricSetReportContext&lt;Histogram&gt;} ctx
+     * @returns {CarbonData}
      * @memberof CarbonMetricReporter
      */
-    private reportHistogram(histogram: Histogram, date: Date): {} {
+    protected reportHistogram(histogram: Histogram, ctx: MetricSetReportContext&lt;Histogram&gt;): CarbonData {
         const value &#x3D; histogram.getCount();
         if (!value || isNaN(value)) {
             return null;
@@ -2822,19 +1402,22 @@ export class CarbonMetricReporter extends MetricReporter {
         measurement[&#x60;p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
         measurement[&#x60;stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
 
-        return measurement;
+        return {
+            measurement,
+            tags: this.buildTags(ctx.registry, histogram),
+        };
     }
 
     /**
-     * Computes and reports the fields of the meter.
+     * Builds the {@link CarbonData} for the specified {@link Meter}.
      *
-     * @private
+     * @protected
      * @param {Meter} meter
-     * @param {Date} date
-     * @returns {{}}
+     * @param {MetricSetReportContext&lt;Meter&gt;} ctx
+     * @returns {CarbonData}
      * @memberof CarbonMetricReporter
      */
-    private reportMeter(meter: Meter, date: Date): {} {
+    protected reportMeter(meter: Meter, ctx: MetricSetReportContext&lt;Meter&gt;): CarbonData {
         const value &#x3D; meter.getCount();
         if (!value || isNaN(value)) {
             return null;
@@ -2849,19 +1432,22 @@ export class CarbonMetricReporter extends MetricReporter {
         measurement[&#x60;m5_rate&#x60;] &#x3D; this.getNumber(meter.get5MinuteRate());
         measurement[&#x60;mean_rate&#x60;] &#x3D; this.getNumber(meter.getMeanRate());
 
-        return measurement;
+        return {
+            measurement,
+            tags: this.buildTags(ctx.registry, meter),
+        };
     }
 
     /**
-     * Computes and reports the fields of the timer.
+     * Builds the {@link CarbonData} for the specified {@link Timer}.
      *
-     * @private
+     * @protected
      * @param {Timer} timer
-     * @param {Date} date
-     * @returns {{}}
+     * @param {MetricSetReportContext&lt;Timer&gt;} ctx
+     * @returns {CarbonData}
      * @memberof CarbonMetricReporter
      */
-    private reportTimer(timer: Timer, date: Date): {} {
+    protected reportTimer(timer: Timer, ctx: MetricSetReportContext&lt;Timer&gt;): CarbonData {
         const value &#x3D; timer.getCount();
         if (!value || isNaN(value)) {
             return null;
@@ -2887,7 +1473,10 @@ export class CarbonMetricReporter extends MetricReporter {
         measurement[&#x60;p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
         measurement[&#x60;stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
 
-        return measurement;
+        return {
+            measurement,
+            tags: this.buildTags(ctx.registry, timer),
+        };
     }
 
 }
@@ -2923,7 +1512,9 @@ export class CarbonMetricReporter extends MetricReporter {
 
        <script src="../js/libs/custom-elements.min.js"></script>
        <script src="../js/libs/lit-html.js"></script>
-       <script src="../js/menu-wc.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
 
        <script src="../js/libs/bootstrap-native.js"></script>
 
