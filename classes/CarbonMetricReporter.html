@@ -119,7 +119,16 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#flushEvents">flushEvents</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#getLog">getLog</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Protected</span>
+                                <a href="#getMetricName">getMetricName</a>
                             </li>
                             <li>
                                     <span class="modifier">Protected</span>
@@ -128,6 +137,11 @@
                             <li>
                                     <span class="modifier">Protected</span>
                                 <a href="#reportCounter">reportCounter</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#reportEvent">reportEvent</a>
                             </li>
                             <li>
                                     <span class="modifier">Protected</span>
@@ -181,7 +195,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:95</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:97</a></div>
                             </td>
                         </tr>
 
@@ -253,7 +267,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="95" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:95</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:97</a></div>
                             </td>
                         </tr>
 
@@ -294,7 +308,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:87</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:89</a></div>
                             </td>
                         </tr>
 
@@ -314,6 +328,54 @@
         <h3 id="methods">
             Methods
         </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="flushEvents"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            flushEvents
+                            </b>
+                            <a href="#flushEvents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>flushEvents()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="231" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:231</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Does nothing</p>
+</div>
+
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;void&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -338,7 +400,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:177</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="179" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:179</a></div>
                             </td>
                         </tr>
 
@@ -352,6 +414,79 @@
                             </div>
                             <div class="io-description">
                                 <b>Returns : </b>    <code>Logger</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getMetricName"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Protected</span>
+                            getMetricName
+                            </b>
+                            <a href="#getMetricName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>getMetricName(metric: Metric)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="469" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:469</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Builds a name for the metric.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>metric</td>
+                                                        <td>
+                                                                    <code>Metric</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                             </div>
                                 <div class="io-description">
@@ -385,7 +520,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="224" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:224</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="268" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:268</a></div>
                             </td>
                         </tr>
 
@@ -506,7 +641,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="252" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:252</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="298" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:298</a></div>
                             </td>
                         </tr>
 
@@ -571,6 +706,89 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="reportEvent"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
+                            reportEvent
+                            </b>
+                            <a href="#reportEvent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                            <span class="modifier-icon icon ion-ios-reset"></span>
+                        <code>reportEvent(event: TEvent)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="200" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:200</a></div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col-md-4">
+                                <b>Type parameters :</b>
+                                <ul class="type-parameters">
+                                        <li>TEventData</li>
+                                        <li>TEvent</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Reports an <a href="Event">Event</a>.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>TEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;TEvent&gt;</code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="reportGauge"></a>
                         <span class="name">
                             <b>
@@ -591,7 +809,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="280" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:280</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="328" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:328</a></div>
                             </td>
                         </tr>
 
@@ -676,7 +894,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="306" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:306</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="356" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:356</a></div>
                             </td>
                         </tr>
 
@@ -761,7 +979,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="343" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:343</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="395" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:395</a></div>
                             </td>
                         </tr>
 
@@ -846,7 +1064,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="373" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:373</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="427" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:427</a></div>
                             </td>
                         </tr>
 
@@ -931,7 +1149,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:187</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="189" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:189</a></div>
                             </td>
                         </tr>
 
@@ -1004,7 +1222,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="196" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:196</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="239" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:239</a></div>
                             </td>
                         </tr>
 
@@ -1014,10 +1232,6 @@
                             <div class="io-description"><p>Uses the scheduler function to trigger periodical reporting.</p>
 </div>
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
-
-                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -1046,7 +1260,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:206</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="249" class="link-to-prism">lib/metrics/CarbonMetricReporter.ts:249</a></div>
                             </td>
                         </tr>
 
@@ -1056,10 +1270,6 @@
                             <div class="io-description"><p>Stops the timer reference returned by the scheduler function.</p>
 </div>
 
-                            <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -1085,10 +1295,12 @@ const graphite &#x3D; require(&quot;graphite&quot;);
 import {
     Clock,
     Counter,
+    Event,
     Gauge,
     Histogram,
     Logger,
     Meter,
+    Metric,
     MetricRegistry,
     MetricSetReportContext,
     MetricType,
@@ -1266,11 +1478,52 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
     }
 
     /**
+     * Reports an {@link Event}.
+     *
+     * @param {Event} event
+     * @returns {Promise&lt;TEvent&gt;}
+     * @memberof CarbonMetricReporter
+     */
+    public async reportEvent&lt;TEventData, TEvent extends Event&lt;TEventData&gt;&gt;(event: TEvent): Promise&lt;TEvent&gt; {
+        const result &#x3D; this.reportGauge(event, {
+            date: event.getTime(),
+            metrics: [],
+            overallCtx: null,
+            registry: null,
+            type: &quot;gauge&quot;,
+        });
+
+        if (result) {
+            await this.handleResults(
+                this.createOverallReportContext(),
+                null,
+                event.getTime(),
+                &quot;gauge&quot;,
+                [{
+                    metric: event,
+                    result,
+                }],
+            );
+        }
+
+        return event;
+    }
+
+    /**
+     * Does nothing
+     *
+     * @returns {Promise&lt;void&gt;}
+     * @memberof CarbonMetricReporter
+     */
+    public async flushEvents(): Promise&lt;void&gt; {
+    }
+
+    /**
      * Uses the scheduler function to trigger periodical reporting.
      *
      * @memberof CarbonMetricReporter
      */
-    public start(): Promise&lt;any&gt; {
+    public start(): this {
         this.client &#x3D; graphite.createClient(this.options.host);
         return super.start();
     }
@@ -1280,11 +1533,12 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
      *
      * @memberof CarbonMetricReporter
      */
-    public stop(): void {
+    public stop(): this {
         super.stop();
         if (this.client) {
             this.client.end();
         }
+        return this;
     }
 
     /**
@@ -1309,7 +1563,9 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
             .map((carbonData) &#x3D;&gt; new Promise((resolve, reject) &#x3D;&gt; {
                 this.client.writeTagged(carbonData.measurement, carbonData.tags, timestamp, (err: any) &#x3D;&gt; {
                     if (err !&#x3D; null) {
-                        this.options.log.error(err, this.logMetadata);
+                        if (this.options.log) {
+                            this.options.log.error(err, this.logMetadata);
+                        }
                         reject(err);
                     }
                     resolve();
@@ -1333,15 +1589,17 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
         if (!value || isNaN(value)) {
             return null;
         }
-        const measurement: any &#x3D; {
-            group: counter.getGroup(),
-            name: counter.getName(),
-        };
-        measurement[&#x60;count&#x60;] &#x3D; counter.getCount() || 0;
+        const tags &#x3D; this.buildTags(ctx.registry, counter);
+        tags[&quot;group&quot;] &#x3D; counter.getGroup();
+        tags[&quot;name&quot;] &#x3D; counter.getName();
+
+        const prefix &#x3D; this.getMetricName(counter);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.count&#x60;] &#x3D; counter.getCount() || 0;
 
         return {
             measurement,
-            tags: this.buildTags(ctx.registry, counter),
+            tags,
         };
     }
 
@@ -1359,15 +1617,17 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
         if (!value || isNaN(value)) {
             return null;
         }
-        const measurement: any &#x3D; {
-            group: gauge.getGroup(),
-            name: gauge.getName(),
-        };
-        measurement[&#x60;value&#x60;] &#x3D; gauge.getValue() || 0;
+        const tags &#x3D; this.buildTags(ctx.registry, gauge);
+        tags[&quot;group&quot;] &#x3D; gauge.getGroup();
+        tags[&quot;name&quot;] &#x3D; gauge.getName();
+
+        const prefix &#x3D; this.getMetricName(gauge);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.value&#x60;] &#x3D; gauge.getValue() || 0;
 
         return {
             measurement,
-            tags: this.buildTags(ctx.registry, gauge),
+            tags,
         };
     }
 
@@ -1386,25 +1646,27 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
             return null;
         }
         const snapshot &#x3D; histogram.getSnapshot();
-        const measurement: any &#x3D; {
-            group: histogram.getGroup(),
-            name: histogram.getName(),
-        };
-        measurement[&#x60;count&#x60;] &#x3D; histogram.getCount() || 0;
-        measurement[&#x60;max&#x60;] &#x3D; this.getNumber(snapshot.getMax());
-        measurement[&#x60;mean&#x60;] &#x3D; this.getNumber(snapshot.getMean());
-        measurement[&#x60;min&#x60;] &#x3D; this.getNumber(snapshot.getMin());
-        measurement[&#x60;p50&#x60;] &#x3D; this.getNumber(snapshot.getMedian());
-        measurement[&#x60;p75&#x60;] &#x3D; this.getNumber(snapshot.get75thPercentile());
-        measurement[&#x60;p95&#x60;] &#x3D; this.getNumber(snapshot.get95thPercentile());
-        measurement[&#x60;p98&#x60;] &#x3D; this.getNumber(snapshot.get98thPercentile());
-        measurement[&#x60;p99&#x60;] &#x3D; this.getNumber(snapshot.get99thPercentile());
-        measurement[&#x60;p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
-        measurement[&#x60;stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
+        const tags &#x3D; this.buildTags(ctx.registry, histogram);
+        tags[&quot;group&quot;] &#x3D; histogram.getGroup();
+        tags[&quot;name&quot;] &#x3D; histogram.getName();
+
+        const prefix &#x3D; this.getMetricName(histogram);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.count&#x60;] &#x3D; histogram.getCount() || 0;
+        measurement[&#x60;${prefix}.max&#x60;] &#x3D; this.getNumber(snapshot.getMax());
+        measurement[&#x60;${prefix}.mean&#x60;] &#x3D; this.getNumber(snapshot.getMean());
+        measurement[&#x60;${prefix}.min&#x60;] &#x3D; this.getNumber(snapshot.getMin());
+        measurement[&#x60;${prefix}.p50&#x60;] &#x3D; this.getNumber(snapshot.getMedian());
+        measurement[&#x60;${prefix}.p75&#x60;] &#x3D; this.getNumber(snapshot.get75thPercentile());
+        measurement[&#x60;${prefix}.p95&#x60;] &#x3D; this.getNumber(snapshot.get95thPercentile());
+        measurement[&#x60;${prefix}.p98&#x60;] &#x3D; this.getNumber(snapshot.get98thPercentile());
+        measurement[&#x60;${prefix}.p99&#x60;] &#x3D; this.getNumber(snapshot.get99thPercentile());
+        measurement[&#x60;${prefix}.p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
+        measurement[&#x60;${prefix}.stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
 
         return {
             measurement,
-            tags: this.buildTags(ctx.registry, histogram),
+            tags,
         };
     }
 
@@ -1422,15 +1684,17 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
         if (!value || isNaN(value)) {
             return null;
         }
-        const measurement: any &#x3D; {
-            group: meter.getGroup(),
-            name: meter.getName(),
-        };
-        measurement[&#x60;count&#x60;] &#x3D; meter.getCount() || 0;
-        measurement[&#x60;m15_rate&#x60;] &#x3D; this.getNumber(meter.get15MinuteRate());
-        measurement[&#x60;m1_rate&#x60;] &#x3D; this.getNumber(meter.get1MinuteRate());
-        measurement[&#x60;m5_rate&#x60;] &#x3D; this.getNumber(meter.get5MinuteRate());
-        measurement[&#x60;mean_rate&#x60;] &#x3D; this.getNumber(meter.getMeanRate());
+        const tags &#x3D; this.buildTags(ctx.registry, meter);
+        tags[&quot;group&quot;] &#x3D; meter.getGroup();
+        tags[&quot;name&quot;] &#x3D; meter.getName();
+
+        const prefix &#x3D; this.getMetricName(meter);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.count&#x60;] &#x3D; meter.getCount() || 0;
+        measurement[&#x60;${prefix}.m15_rate&#x60;] &#x3D; this.getNumber(meter.get15MinuteRate());
+        measurement[&#x60;${prefix}.m1_rate&#x60;] &#x3D; this.getNumber(meter.get1MinuteRate());
+        measurement[&#x60;${prefix}.m5_rate&#x60;] &#x3D; this.getNumber(meter.get5MinuteRate());
+        measurement[&#x60;${prefix}.mean_rate&#x60;] &#x3D; this.getNumber(meter.getMeanRate());
 
         return {
             measurement,
@@ -1453,30 +1717,47 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
             return null;
         }
         const snapshot &#x3D; timer.getSnapshot();
-        const measurement: any &#x3D; {
-            group: timer.getGroup(),
-            name: timer.getName(),
-        };
-        measurement[&#x60;count&#x60;] &#x3D; timer.getCount() || 0;
-        measurement[&#x60;m15_rate&#x60;] &#x3D; this.getNumber(timer.get15MinuteRate());
-        measurement[&#x60;m1_rate&#x60;] &#x3D; this.getNumber(timer.get1MinuteRate());
-        measurement[&#x60;m5_rate&#x60;] &#x3D; this.getNumber(timer.get5MinuteRate());
-        measurement[&#x60;max&#x60;] &#x3D; this.getNumber(snapshot.getMax());
-        measurement[&#x60;mean&#x60;] &#x3D; this.getNumber(snapshot.getMean());
-        measurement[&#x60;mean_rate&#x60;] &#x3D; this.getNumber(timer.getMeanRate());
-        measurement[&#x60;min&#x60;] &#x3D; this.getNumber(snapshot.getMin());
-        measurement[&#x60;p50&#x60;] &#x3D; this.getNumber(snapshot.getMedian());
-        measurement[&#x60;p75&#x60;] &#x3D; this.getNumber(snapshot.get75thPercentile());
-        measurement[&#x60;p95&#x60;] &#x3D; this.getNumber(snapshot.get95thPercentile());
-        measurement[&#x60;p98&#x60;] &#x3D; this.getNumber(snapshot.get98thPercentile());
-        measurement[&#x60;p99&#x60;] &#x3D; this.getNumber(snapshot.get99thPercentile());
-        measurement[&#x60;p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
-        measurement[&#x60;stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
+        const tags &#x3D; this.buildTags(ctx.registry, timer);
+        tags[&quot;group&quot;] &#x3D; timer.getGroup();
+        tags[&quot;name&quot;] &#x3D; timer.getName();
+
+        const prefix &#x3D; this.getMetricName(timer);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.count&#x60;] &#x3D; timer.getCount() || 0;
+        measurement[&#x60;${prefix}.m15_rate&#x60;] &#x3D; this.getNumber(timer.get15MinuteRate());
+        measurement[&#x60;${prefix}.m1_rate&#x60;] &#x3D; this.getNumber(timer.get1MinuteRate());
+        measurement[&#x60;${prefix}.m5_rate&#x60;] &#x3D; this.getNumber(timer.get5MinuteRate());
+        measurement[&#x60;${prefix}.max&#x60;] &#x3D; this.getNumber(snapshot.getMax());
+        measurement[&#x60;${prefix}.mean&#x60;] &#x3D; this.getNumber(snapshot.getMean());
+        measurement[&#x60;${prefix}.mean_rate&#x60;] &#x3D; this.getNumber(timer.getMeanRate());
+        measurement[&#x60;${prefix}.min&#x60;] &#x3D; this.getNumber(snapshot.getMin());
+        measurement[&#x60;${prefix}.p50&#x60;] &#x3D; this.getNumber(snapshot.getMedian());
+        measurement[&#x60;${prefix}.p75&#x60;] &#x3D; this.getNumber(snapshot.get75thPercentile());
+        measurement[&#x60;${prefix}.p95&#x60;] &#x3D; this.getNumber(snapshot.get95thPercentile());
+        measurement[&#x60;${prefix}.p98&#x60;] &#x3D; this.getNumber(snapshot.get98thPercentile());
+        measurement[&#x60;${prefix}.p99&#x60;] &#x3D; this.getNumber(snapshot.get99thPercentile());
+        measurement[&#x60;${prefix}.p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
+        measurement[&#x60;${prefix}.stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
 
         return {
             measurement,
             tags: this.buildTags(ctx.registry, timer),
         };
+    }
+
+    /**
+     * Builds a name for the metric.
+     *
+     * @protected
+     * @param {Metric} metric
+     * @returns {string}
+     * @memberof CarbonMetricReporter
+     */
+    protected getMetricName(metric: Metric): string {
+        if (metric.getGroup()) {
+            return &#x60;${metric.getGroup()}.${metric.getName()}&#x60;;
+        }
+        return metric.getName();
     }
 
 }

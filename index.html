@@ -49,7 +49,7 @@
 </p>
 
 <p>This library is made for <a href="https://github.com/rstiller/inspector-metrics">inspector-metrics</a> node module and
-is meant to be used with <code>typescript</code> / <code>nodejs</code>.<br>It uses <a href="https://github.com/felixge/node-graphite">node-graphite</a> as graphite/carbon client.</p>
+is meant to be used with <code>nodejs</code>.<br>It uses <a href="https://github.com/felixge/node-graphite">node-graphite</a> as graphite/carbon client.</p>
 <h2 id="install">install</h2>
 <p><code>npm install --save inspector-carbon</code></p>
 <h2 id="basic-usage">basic usage</h2>
@@ -57,7 +57,9 @@ is meant to be used with <code>typescript</code> / <code>nodejs</code>.<br>It us
 import { CarbonMetricReporter } from &quot;inspector-carbon&quot;;
 
 // instance the carbon reporter
-const reporter: CarbonMetricReporter = new CarbonMetricReporter(&quot;plaintext://graphite:2003/&quot;);
+const reporter: CarbonMetricReporter = new CarbonMetricReporter({
+    host: &quot;http://graphite-server/&quot;,
+});
 const registry: MetricRegistry = new MetricRegistry();
 
 // add the registry to the reporter
@@ -68,21 +70,40 @@ reporter.start();</code></pre></div><h3 id="set-common-tags-for-all-metrics">set
 import { CarbonMetricReporter } from &quot;inspector-carbon&quot;;
 
 // instance the carbon reporter
-const reporter: CarbonMetricReporter = new CarbonMetricReporter(&quot;plaintext://graphite:2003/&quot;);
+const reporter: CarbonMetricReporter = new CarbonMetricReporter({
+    host: &quot;http://graphite-server/&quot;,
+});
 
 // set common tags for all metrics
 reporter.getTags().set(&quot;app-name&quot;, &quot;my-service&quot;);
-reporter.getTags().set(&quot;app-version&quot;, &quot;v1.2.3&quot;);</code></pre></div><h2 id="dev">dev</h2>
+reporter.getTags().set(&quot;app-version&quot;, &quot;v1.2.3&quot;);</code></pre></div><h3 id="reporting-events">reporting events</h3>
+<div><pre class="line-numbers"><code class="language-typescript">import { Event, MetricRegistry } from &quot;inspector-metrics&quot;;
+import { CarbonMetricReporter } from &quot;inspector-carbon&quot;;
+
+// instance the carbon reporter
+const reporter: CarbonMetricReporter = new CarbonMetricReporter({
+    host: &quot;http://graphite-server/&quot;,
+});
+
+// build an ad-hoc event
+const event = new Event&lt;number&gt;(&quot;application_started&quot;)
+    .setValue(1.0)
+    .setTag(&quot;mode&quot;, &quot;test&quot;)
+    .setTag(&quot;customTag&quot;, &quot;specialValue&quot;);
+
+// send the event to graphite
+reporter.reportEvent(event);</code></pre></div><h2 id="dev">dev</h2>
 <h3 id="using-the-playground">using the playground</h3>
 <p>To use the playground you need to have <code>docker</code> and <code>docker-compose</code> installed.</p>
-<div><pre class="line-numbers"><code class="language-bash">npm run compile
+<div><pre class="line-numbers"><code class="language-bash"># boots all services (graphite / grafana) and provisions the example dashboard
+playground/boot.sh
 # running playground script
-playground/playground.sh</code></pre></div><h3 id="view-data-in-grafana">view data in grafana</h3>
+./playground.sh</code></pre></div><h3 id="view-data-in-grafana">view data in grafana</h3>
 <ol>
 <li>Navigate to <code>http://localhost:3000</code></li>
-<li>Add a new Data Source (type: graphite, username / password: root/root, host / url: <a href="http://graphite/">http://graphite/</a>)</li>
-<li>Create a new graph</li>
+<li>select example dashboard (upper left corner: &quot;Home&quot;) &quot;Graphite / Carbon example Dashboard&quot;</li>
 </ol>
+<p><img src="assets/example_dashboard.png" alt="Example Dashboard" class="img-responsive"></p>
 <h2 id="license">License</h2>
 <p><a href="https://www.opensource.org/licenses/mit-license.php">MIT</a></p>
 

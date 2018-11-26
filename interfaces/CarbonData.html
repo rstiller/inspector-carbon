@@ -187,10 +187,12 @@ const graphite &#x3D; require(&quot;graphite&quot;);
 import {
     Clock,
     Counter,
+    Event,
     Gauge,
     Histogram,
     Logger,
     Meter,
+    Metric,
     MetricRegistry,
     MetricSetReportContext,
     MetricType,
@@ -368,11 +370,52 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
     }
 
     /**
+     * Reports an {@link Event}.
+     *
+     * @param {Event} event
+     * @returns {Promise&lt;TEvent&gt;}
+     * @memberof CarbonMetricReporter
+     */
+    public async reportEvent&lt;TEventData, TEvent extends Event&lt;TEventData&gt;&gt;(event: TEvent): Promise&lt;TEvent&gt; {
+        const result &#x3D; this.reportGauge(event, {
+            date: event.getTime(),
+            metrics: [],
+            overallCtx: null,
+            registry: null,
+            type: &quot;gauge&quot;,
+        });
+
+        if (result) {
+            await this.handleResults(
+                this.createOverallReportContext(),
+                null,
+                event.getTime(),
+                &quot;gauge&quot;,
+                [{
+                    metric: event,
+                    result,
+                }],
+            );
+        }
+
+        return event;
+    }
+
+    /**
+     * Does nothing
+     *
+     * @returns {Promise&lt;void&gt;}
+     * @memberof CarbonMetricReporter
+     */
+    public async flushEvents(): Promise&lt;void&gt; {
+    }
+
+    /**
      * Uses the scheduler function to trigger periodical reporting.
      *
      * @memberof CarbonMetricReporter
      */
-    public start(): Promise&lt;any&gt; {
+    public start(): this {
         this.client &#x3D; graphite.createClient(this.options.host);
         return super.start();
     }
@@ -382,11 +425,12 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
      *
      * @memberof CarbonMetricReporter
      */
-    public stop(): void {
+    public stop(): this {
         super.stop();
         if (this.client) {
             this.client.end();
         }
+        return this;
     }
 
     /**
@@ -411,7 +455,9 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
             .map((carbonData) &#x3D;&gt; new Promise((resolve, reject) &#x3D;&gt; {
                 this.client.writeTagged(carbonData.measurement, carbonData.tags, timestamp, (err: any) &#x3D;&gt; {
                     if (err !&#x3D; null) {
-                        this.options.log.error(err, this.logMetadata);
+                        if (this.options.log) {
+                            this.options.log.error(err, this.logMetadata);
+                        }
                         reject(err);
                     }
                     resolve();
@@ -435,15 +481,17 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
         if (!value || isNaN(value)) {
             return null;
         }
-        const measurement: any &#x3D; {
-            group: counter.getGroup(),
-            name: counter.getName(),
-        };
-        measurement[&#x60;count&#x60;] &#x3D; counter.getCount() || 0;
+        const tags &#x3D; this.buildTags(ctx.registry, counter);
+        tags[&quot;group&quot;] &#x3D; counter.getGroup();
+        tags[&quot;name&quot;] &#x3D; counter.getName();
+
+        const prefix &#x3D; this.getMetricName(counter);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.count&#x60;] &#x3D; counter.getCount() || 0;
 
         return {
             measurement,
-            tags: this.buildTags(ctx.registry, counter),
+            tags,
         };
     }
 
@@ -461,15 +509,17 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
         if (!value || isNaN(value)) {
             return null;
         }
-        const measurement: any &#x3D; {
-            group: gauge.getGroup(),
-            name: gauge.getName(),
-        };
-        measurement[&#x60;value&#x60;] &#x3D; gauge.getValue() || 0;
+        const tags &#x3D; this.buildTags(ctx.registry, gauge);
+        tags[&quot;group&quot;] &#x3D; gauge.getGroup();
+        tags[&quot;name&quot;] &#x3D; gauge.getName();
+
+        const prefix &#x3D; this.getMetricName(gauge);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.value&#x60;] &#x3D; gauge.getValue() || 0;
 
         return {
             measurement,
-            tags: this.buildTags(ctx.registry, gauge),
+            tags,
         };
     }
 
@@ -488,25 +538,27 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
             return null;
         }
         const snapshot &#x3D; histogram.getSnapshot();
-        const measurement: any &#x3D; {
-            group: histogram.getGroup(),
-            name: histogram.getName(),
-        };
-        measurement[&#x60;count&#x60;] &#x3D; histogram.getCount() || 0;
-        measurement[&#x60;max&#x60;] &#x3D; this.getNumber(snapshot.getMax());
-        measurement[&#x60;mean&#x60;] &#x3D; this.getNumber(snapshot.getMean());
-        measurement[&#x60;min&#x60;] &#x3D; this.getNumber(snapshot.getMin());
-        measurement[&#x60;p50&#x60;] &#x3D; this.getNumber(snapshot.getMedian());
-        measurement[&#x60;p75&#x60;] &#x3D; this.getNumber(snapshot.get75thPercentile());
-        measurement[&#x60;p95&#x60;] &#x3D; this.getNumber(snapshot.get95thPercentile());
-        measurement[&#x60;p98&#x60;] &#x3D; this.getNumber(snapshot.get98thPercentile());
-        measurement[&#x60;p99&#x60;] &#x3D; this.getNumber(snapshot.get99thPercentile());
-        measurement[&#x60;p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
-        measurement[&#x60;stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
+        const tags &#x3D; this.buildTags(ctx.registry, histogram);
+        tags[&quot;group&quot;] &#x3D; histogram.getGroup();
+        tags[&quot;name&quot;] &#x3D; histogram.getName();
+
+        const prefix &#x3D; this.getMetricName(histogram);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.count&#x60;] &#x3D; histogram.getCount() || 0;
+        measurement[&#x60;${prefix}.max&#x60;] &#x3D; this.getNumber(snapshot.getMax());
+        measurement[&#x60;${prefix}.mean&#x60;] &#x3D; this.getNumber(snapshot.getMean());
+        measurement[&#x60;${prefix}.min&#x60;] &#x3D; this.getNumber(snapshot.getMin());
+        measurement[&#x60;${prefix}.p50&#x60;] &#x3D; this.getNumber(snapshot.getMedian());
+        measurement[&#x60;${prefix}.p75&#x60;] &#x3D; this.getNumber(snapshot.get75thPercentile());
+        measurement[&#x60;${prefix}.p95&#x60;] &#x3D; this.getNumber(snapshot.get95thPercentile());
+        measurement[&#x60;${prefix}.p98&#x60;] &#x3D; this.getNumber(snapshot.get98thPercentile());
+        measurement[&#x60;${prefix}.p99&#x60;] &#x3D; this.getNumber(snapshot.get99thPercentile());
+        measurement[&#x60;${prefix}.p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
+        measurement[&#x60;${prefix}.stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
 
         return {
             measurement,
-            tags: this.buildTags(ctx.registry, histogram),
+            tags,
         };
     }
 
@@ -524,15 +576,17 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
         if (!value || isNaN(value)) {
             return null;
         }
-        const measurement: any &#x3D; {
-            group: meter.getGroup(),
-            name: meter.getName(),
-        };
-        measurement[&#x60;count&#x60;] &#x3D; meter.getCount() || 0;
-        measurement[&#x60;m15_rate&#x60;] &#x3D; this.getNumber(meter.get15MinuteRate());
-        measurement[&#x60;m1_rate&#x60;] &#x3D; this.getNumber(meter.get1MinuteRate());
-        measurement[&#x60;m5_rate&#x60;] &#x3D; this.getNumber(meter.get5MinuteRate());
-        measurement[&#x60;mean_rate&#x60;] &#x3D; this.getNumber(meter.getMeanRate());
+        const tags &#x3D; this.buildTags(ctx.registry, meter);
+        tags[&quot;group&quot;] &#x3D; meter.getGroup();
+        tags[&quot;name&quot;] &#x3D; meter.getName();
+
+        const prefix &#x3D; this.getMetricName(meter);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.count&#x60;] &#x3D; meter.getCount() || 0;
+        measurement[&#x60;${prefix}.m15_rate&#x60;] &#x3D; this.getNumber(meter.get15MinuteRate());
+        measurement[&#x60;${prefix}.m1_rate&#x60;] &#x3D; this.getNumber(meter.get1MinuteRate());
+        measurement[&#x60;${prefix}.m5_rate&#x60;] &#x3D; this.getNumber(meter.get5MinuteRate());
+        measurement[&#x60;${prefix}.mean_rate&#x60;] &#x3D; this.getNumber(meter.getMeanRate());
 
         return {
             measurement,
@@ -555,30 +609,47 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
             return null;
         }
         const snapshot &#x3D; timer.getSnapshot();
-        const measurement: any &#x3D; {
-            group: timer.getGroup(),
-            name: timer.getName(),
-        };
-        measurement[&#x60;count&#x60;] &#x3D; timer.getCount() || 0;
-        measurement[&#x60;m15_rate&#x60;] &#x3D; this.getNumber(timer.get15MinuteRate());
-        measurement[&#x60;m1_rate&#x60;] &#x3D; this.getNumber(timer.get1MinuteRate());
-        measurement[&#x60;m5_rate&#x60;] &#x3D; this.getNumber(timer.get5MinuteRate());
-        measurement[&#x60;max&#x60;] &#x3D; this.getNumber(snapshot.getMax());
-        measurement[&#x60;mean&#x60;] &#x3D; this.getNumber(snapshot.getMean());
-        measurement[&#x60;mean_rate&#x60;] &#x3D; this.getNumber(timer.getMeanRate());
-        measurement[&#x60;min&#x60;] &#x3D; this.getNumber(snapshot.getMin());
-        measurement[&#x60;p50&#x60;] &#x3D; this.getNumber(snapshot.getMedian());
-        measurement[&#x60;p75&#x60;] &#x3D; this.getNumber(snapshot.get75thPercentile());
-        measurement[&#x60;p95&#x60;] &#x3D; this.getNumber(snapshot.get95thPercentile());
-        measurement[&#x60;p98&#x60;] &#x3D; this.getNumber(snapshot.get98thPercentile());
-        measurement[&#x60;p99&#x60;] &#x3D; this.getNumber(snapshot.get99thPercentile());
-        measurement[&#x60;p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
-        measurement[&#x60;stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
+        const tags &#x3D; this.buildTags(ctx.registry, timer);
+        tags[&quot;group&quot;] &#x3D; timer.getGroup();
+        tags[&quot;name&quot;] &#x3D; timer.getName();
+
+        const prefix &#x3D; this.getMetricName(timer);
+        const measurement: any &#x3D; {};
+        measurement[&#x60;${prefix}.count&#x60;] &#x3D; timer.getCount() || 0;
+        measurement[&#x60;${prefix}.m15_rate&#x60;] &#x3D; this.getNumber(timer.get15MinuteRate());
+        measurement[&#x60;${prefix}.m1_rate&#x60;] &#x3D; this.getNumber(timer.get1MinuteRate());
+        measurement[&#x60;${prefix}.m5_rate&#x60;] &#x3D; this.getNumber(timer.get5MinuteRate());
+        measurement[&#x60;${prefix}.max&#x60;] &#x3D; this.getNumber(snapshot.getMax());
+        measurement[&#x60;${prefix}.mean&#x60;] &#x3D; this.getNumber(snapshot.getMean());
+        measurement[&#x60;${prefix}.mean_rate&#x60;] &#x3D; this.getNumber(timer.getMeanRate());
+        measurement[&#x60;${prefix}.min&#x60;] &#x3D; this.getNumber(snapshot.getMin());
+        measurement[&#x60;${prefix}.p50&#x60;] &#x3D; this.getNumber(snapshot.getMedian());
+        measurement[&#x60;${prefix}.p75&#x60;] &#x3D; this.getNumber(snapshot.get75thPercentile());
+        measurement[&#x60;${prefix}.p95&#x60;] &#x3D; this.getNumber(snapshot.get95thPercentile());
+        measurement[&#x60;${prefix}.p98&#x60;] &#x3D; this.getNumber(snapshot.get98thPercentile());
+        measurement[&#x60;${prefix}.p99&#x60;] &#x3D; this.getNumber(snapshot.get99thPercentile());
+        measurement[&#x60;${prefix}.p999&#x60;] &#x3D; this.getNumber(snapshot.get999thPercentile());
+        measurement[&#x60;${prefix}.stddev&#x60;] &#x3D; this.getNumber(snapshot.getStdDev());
 
         return {
             measurement,
             tags: this.buildTags(ctx.registry, timer),
         };
+    }
+
+    /**
+     * Builds a name for the metric.
+     *
+     * @protected
+     * @param {Metric} metric
+     * @returns {string}
+     * @memberof CarbonMetricReporter
+     */
+    protected getMetricName(metric: Metric): string {
+        if (metric.getGroup()) {
+            return &#x60;${metric.getGroup()}.${metric.getName()}&#x60;;
+        }
+        return metric.getName();
     }
 
 }
