@@ -165,10 +165,12 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#start">start</a>
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
                                 <a href="#stop">stop</a>
                             </li>
                         </ul>
@@ -1206,6 +1208,7 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
                             start
                             </b>
                             <a href="#start"><span class="icon ion-ios-link"></span></a>
@@ -1232,6 +1235,10 @@
                             <div class="io-description"><p>Uses the scheduler function to trigger periodical reporting.</p>
 </div>
 
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;&gt;</code>
+
+                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -1244,6 +1251,7 @@
                         <span class="name">
                             <b>
                                 <span class="modifier">Public</span>
+                                <span class="modifier">Async</span>
                             stop
                             </b>
                             <a href="#stop"><span class="icon ion-ios-link"></span></a>
@@ -1270,6 +1278,10 @@
                             <div class="io-description"><p>Stops the timer reference returned by the scheduler function.</p>
 </div>
 
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Promise&lt;&gt;</code>
+
+                            </div>
                     </td>
                 </tr>
             </tbody>
@@ -1523,7 +1535,7 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
      *
      * @memberof CarbonMetricReporter
      */
-    public start(): this {
+    public async start(): Promise&lt;this&gt; {
         this.client &#x3D; graphite.createClient(this.options.host);
         return super.start();
     }
@@ -1533,10 +1545,10 @@ export class CarbonMetricReporter extends ScheduledMetricReporter&lt;CarbonMetri
      *
      * @memberof CarbonMetricReporter
      */
-    public stop(): this {
-        super.stop();
+    public async stop(): Promise&lt;this&gt; {
+        await super.stop();
         if (this.client) {
-            this.client.end();
+            await this.client.end();
         }
         return this;
     }
